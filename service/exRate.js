@@ -91,7 +91,6 @@ async function getExRate(currency) {
 
 		})
 	}
-	console.log('get currency:',currency,' from ', exChangeRateCache)
 	return exChangeRateCache[currency] ? exChangeRateCache[currency] : 1
 }
 
