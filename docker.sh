@@ -1,7 +1,7 @@
 #! /bin/bash
 #$1 Should be en0 in Mac and eth0 in unbuntu
 
-LOCAL_IP=`ifconfig | grep -e '$1' -A 4 | grep -e 'inet ' | awk '{split($0,a," "); print a[2]}'`
+LOCAL_IP=`ifconfig | grep -e "$1" -A 4 | grep -e 'inet ' | awk '{split($0,a," "); print a[2]}'`
 
 if [ -z $LOCAL_IP ] ; then 
 	echo "cant find related ip address"
